@@ -40,7 +40,7 @@ To upgrade it needs to have an object detection model which can detect and class
 since the second stage is the current bottleneck of this system. In short, it needs more data.
 
 <p align="center">
-  <img src="mongol_alpr_output/8.jpg" width=1024 height=576>
+  <img src="mongol_alpr_output/8_enhanced.jpg" width=1024 height=576>
 </p>
 
 # Let's take it for a test drive
