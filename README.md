@@ -55,7 +55,7 @@ inside the repository
 
 4. Run "test_exported_model.ipynb" on jupyter notebook. Outputs will be written into "mongol_alpr_output" directory.
 
-I already put first 10 image outputs as a preview.
+I already put first 30 outputs with and without preprocessing(light enhancement) in order to demonstrate how it affects the performance.
 You can tweak the code and load in different models from "exported_model_directory".
 
 If you run into problems check out [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection) and try to setup your environments accordingly.
