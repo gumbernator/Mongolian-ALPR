@@ -46,7 +46,7 @@ since the second stage is the current bottleneck of this system. In short, it ne
 # Let's take it for a test drive
 
 ## Requirements
-- Python 3 packages: tensorflow, opencv, numpy, matplotlib, skimage, imutils
+- Python 3 packages: tensorflow, opencv, numpy, matplotlib, skimage, imutils (all the dependencies are in "requirements.txt" file)
 1. Clone this repository somewhere
 
 2. Download and extract [exported_model_directory](https://drive.google.com/open?id=1-mUz2QQU-V7KtlPhV0M1bi-Hj8x1QgKq)
