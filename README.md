@@ -10,15 +10,15 @@ Mongolian vehicles.
 Used [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection) 
 for detecting the license plate.
 Speed is important in ALPR because vehicles are usually on the move.
-I chose a pretrained model of SSD (Single Shot Detector) and Faster RCNN (Region based Convolutional Neural Network)
+I chose pretrained models based on SSD (Single Shot Detector) and Faster RCNN (Region based Convolutional Neural Network)
 algorithms since they enjoy a higher speed than other object detection algorithms and only getting beaten by 
 algorithms such as YOLO (You Only Look Once). But didn't find any pretrained model based on YOLO from Tensorflow Object 
 Detection API.
 
-For a second stage I couldn't train a machine learning model to detect characters due to small dataset of images.
+Couldn't train a machine learning model to detect characters for a second stage due to small dataset of images.
 Some characters act as a location identifier so they are found in images more than other characters which leads to 
-imbalance in a characters dataset. Even then characters on average had occurred in 20 vehicle images from the whole 
-dataset of 600+ images. Also I was slowly losing my soul to image labeling task. So I resorted for a more traditional
+imbalance in a characters dataset. Even then, each character on average had occurred in 20 vehicle images from the whole 
+dataset of 600+ images. Also, image labeling task was tedious. So I resorted for a more traditional
 image processing methods.
 
 First did some [shadow removal](https://stackoverflow.com/questions/44752240/how-to-remove-shadow-from-scanned-images-using-opencv)
