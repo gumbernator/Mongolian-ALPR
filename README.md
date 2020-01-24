@@ -5,18 +5,18 @@ Automated License Plate Recognition for Mongolian vehicle
 This repository implements two-stage ALPR (Automated License Plate Recognition) on about 600+ images of 
 Mongolian vehicles.
 - First stage being detecting the license plate
-- Second stage is finding and recognizing characters on the detected license plate
+- Second stage is finding and recognizing characters from the detected license plate
 
 Used [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection) 
 for detecting the license plate.
 Speed is important in ALPR because vehicles are usually on the move.
-I choose a pretrained model of SSD (Single Shot Detector) and Faster RCNN (Region based Convolutional Neural Network)
+I chose a pretrained model of SSD (Single Shot Detector) and Faster RCNN (Region based Convolutional Neural Network)
 algorithms since they enjoy a higher speed than other object detection algorithms and only getting beaten by 
 algorithms such as YOLO (You Only Look Once). But didn't find any pretrained model based on YOLO from Tensorflow Object 
 Detection API.
 
 For a second stage I couldn't train a machine learning model to detect characters due to small dataset of images.
-Some characters act as a location identifier hence they found in images more than other characters which leads to 
+Some characters act as a location identifier so they are found in images more than other characters which leads to 
 imbalance in a characters dataset. Even then characters on average had occurred in 20 vehicle images from the whole 
 dataset of 600+ images. Also I was slowly losing my soul to image labeling task. So I resorted for a more traditional
 image processing methods.
@@ -29,14 +29,14 @@ the characters. After removing some of it based on size and ratio we end up with
 potential to be characters. Now we turn the masks into bounding boxes and crop them out from the plate image.
 I trained a simple CNN (Convolutional Neural Network) similar to [MNIST example](https://keras.io/examples/mnist_cnn/) 
 on Keras documentation. Augmented character images (200 images from each character) to train the CNN. 
-Ran the model on cropped images and it's done.
+Then ran the model on cropped bounding boxes and it's done.
 
 Currently it has a score of 66-72 mAP (mean average precision) for plate detection.
 
-And character recognition for the license plate is heavily relied on a plate type, image angle and ambient light. So
+And the character recognition of license plate is heavily dependant from plate type, camera angle and ambient lights. So
 the exact accuracy is hard to evaluate.
 
-To upgrade it needs to have an object detection model which can detect and classify characters from a plate image
+To upgrade it needs to have an object detection model which can detect and classify characters from a plate image like a first stage
 since the second stage is the current bottleneck of this system. In short, it needs more data.
 
 <p align="center">
