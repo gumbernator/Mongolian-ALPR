@@ -1,5 +1,7 @@
 # Mongolian-ALPR
 Automated License Plate Recognition for Mongolian vehicle
+
+
 ![](preview.gif)
 # Introduction 
 This repository implements two-stage ALPR (Automated License Plate Recognition) on about 600+ images of 
