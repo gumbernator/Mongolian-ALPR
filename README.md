@@ -1,3 +1,6 @@
+# !!!Disclaimer: The link to model weights is lost. Currently you cannot use this repo as intended.
+Sorry for the inconvenience, I'll try to work on a new and improved version in the future.
+
 # Mongolian-ALPR
 Automated License Plate Recognition for Mongolian vehicle
 
